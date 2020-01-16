@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
+
+import Home from './components/home/Home';
 
 export default class App extends Component{
   render() {
     return (
       <View style={styles.container}>
-        <Text>Self Quiz Test</Text>
+        <Home />
       </View>
     );
   }
