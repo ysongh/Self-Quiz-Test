@@ -1,0 +1,3 @@
+rootProject.name = 'SelfQuizTest'
+
+include ':app'
