@@ -1,25 +1,23 @@
 import React, {Component} from 'react';
-import {View, StyleSheet} from 'react-native';
+import { createStackNavigator } from 'react-navigation';
 
-import Home from './components/home/Home';
-import Subject from './components/subject/Subject';
+import HomeScreen from './components/home/Home';
+import SubjectScreen from './components/subject/Subject';
+
+const RootStack = createStackNavigator(
+  {
+    Home: HomeScreen,
+    Subject: SubjectScreen,
+  },
+  {
+    initialRouteName: 'Home',
+  }
+);
 
 export default class App extends Component{
   render() {
     return (
-      <View style={styles.container}>
-        <Home />
-        <Subject />
-      </View>
+        <RootStack />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  }
-});
