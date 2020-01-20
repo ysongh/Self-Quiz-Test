@@ -1,13 +1,12 @@
 import React from 'react';
 import {Text, View, TouchableOpacity, StyleSheet} from 'react-native';
-import { createStackNavigator } from 'react-navigation';
 
 const Home = ({ navigation }) => {
     return(
-        <View>
+        <View style={styles.container}>
             <Text style={styles.title}>Self Quiz Test</Text>
-            <TouchableOpacity onPress={() => navigation.push('Subject')}>
-                <Text>Start</Text>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.push('Subject')}>
+                <Text style={styles.buttonText}>Start</Text>
             </TouchableOpacity>
         </View>
     )
@@ -16,7 +15,25 @@ const Home = ({ navigation }) => {
 export default Home;
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F5FCFF',
+    },
     title: {
-        fontSize: 50
+        fontSize: 50,
+        fontWeight: "bold",
+        marginBottom: 50
+    },
+    button: {
+        width: "70%",
+        backgroundColor: "#64EE7A",
+        paddingVertical: 15,
+        borderRadius: 10,
+    },
+    buttonText: {
+        fontSize: 25,
+        textAlign: "center"
     }
 });
