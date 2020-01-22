@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 
-const Subject = () => {
+const Subject = ({ navigation }) => {
     return(
         <View>
             <Text style={styles.title}>Choose your subject</Text>
@@ -9,7 +9,7 @@ const Subject = () => {
                 <TouchableOpacity style={styles.button}>
                     <Text style={styles.buttonText}>Javascript</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.push('Question')}>
                     <Text style={styles.buttonText}>React</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button}>
