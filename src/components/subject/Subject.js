@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
     title: {
         marginTop: 25,
         fontSize: 30,
-        textAlign: "center"
+        textAlign: "center",
+        fontWeight: "bold"
     },
     container: {
         display: "flex",
