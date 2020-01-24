@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 
 const Question = () => {
+    const [quesAnswer, setQuesAnswer] = useState([{"q": "What is React?", "a": "React is a JavaScript library."}]);
+    const [showAnswer, setShowAnswer] = useState(false);
+
     return(
         <View style={styles.container}>
             <Text style={styles.title}>React</Text>
-            <Text style={styles.question}>What is React?</Text>
-            <Text style={styles.answer}>React is a JavaScript library.</Text>
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText}>Next</Text>
+            
+            <Text style={styles.question}>{quesAnswer[0].q}</Text>
+            {showAnswer ? <Text style={styles.answer}>{quesAnswer[0].a}</Text> : null}
+
+            <TouchableOpacity style={styles.button} onPress={() => setShowAnswer(!showAnswer)}>
+                <Text style={styles.buttonText}>
+                    {showAnswer ? "Hide Answer": "Show Answer"}
+                </Text>
             </TouchableOpacity>
         </View>
     )
