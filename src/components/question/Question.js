@@ -21,15 +21,28 @@ const Question = () => {
                     {showAnswer ? "Hide Answer": "Show Answer"}
                 </Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={() => {
-                setNumber(number += 1);
-                if(number < quesAnswer.length){
-                    setShowAnswer(false);
-                    setCurrent({"q": quesAnswer[number].q, "a": quesAnswer[number].a})
-                }
-            }}>
-                <Text style={styles.buttonText}>Next</Text>
-            </TouchableOpacity>
+
+            <View style={styles.buttonGroup}>
+                <TouchableOpacity style={styles.button} onPress={() => {
+                    if(number > 0){
+                        setNumber(number -= 1);
+                        setShowAnswer(false);
+                        setCurrent({"q": quesAnswer[number].q, "a": quesAnswer[number].a})
+                    }
+                }}>
+                    <Text style={styles.buttonText}>Back</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.button} onPress={() => {
+                    if(number < quesAnswer.length - 1){
+                        setNumber(number += 1);
+                        setShowAnswer(false);
+                        setCurrent({"q": quesAnswer[number].q, "a": quesAnswer[number].a})
+                    }
+                }}>
+                    <Text style={styles.buttonText}>Next</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     )
 }
@@ -54,8 +67,13 @@ const styles = StyleSheet.create({
         fontSize: 20,
         marginBottom: 20
     },
+    buttonGroup:{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between"
+    },
     button: {
-        width: "50%",
+        width: "45%",
         backgroundColor: "#64EE7A",
         alignSelf: "center",
         paddingVertical: 15,
