@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 
-import { data } from "../../Data";
+import { data } from "../Data";
 
 const Question = () => {
     const [quesAnswer, setQuesAnswer] = useState(data);

@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import { createStackNavigator } from 'react-navigation';
 
-import HomeScreen from './components/home/Home';
-import SubjectScreen from './components/subject/Subject';
-import QuestionScreen from  './components/question/Question';
+import HomeScreen from './screens/HomeScreen';
+import SubjectScreen from './screens/SubjectScreen';
+import QuestionScreen from  './screens/QuestionScreen';
 
 const RootStack = createStackNavigator(
   {
