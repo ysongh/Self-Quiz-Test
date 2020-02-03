@@ -1,10 +1,13 @@
 import React from 'react';
-import {Text, View, TouchableOpacity, StyleSheet} from 'react-native';
+import {Text, View, Image, TouchableOpacity, StyleSheet} from 'react-native';
+
+import Logo from "../img/logo.png";
 
 const Home = ({ navigation }) => {
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Self Quiz Test</Text>
+            <Image style={styles.image} source={Logo} />
             <TouchableOpacity style={styles.button} onPress={() => navigation.push('Subject')}>
                 <Text style={styles.buttonText}>Start</Text>
             </TouchableOpacity>
@@ -24,6 +27,9 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 50,
         fontWeight: "bold",
+        marginBottom: 50
+    },
+    image:{
         marginBottom: 50
     },
     button: {
