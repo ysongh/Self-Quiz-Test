@@ -23,7 +23,7 @@ const Question = () => {
             </TouchableOpacity>
 
             <View style={styles.buttonGroup}>
-                <TouchableOpacity style={styles.button} onPress={() => {
+                <TouchableOpacity style={styles.backButton} onPress={() => {
                     if(number > 0){
                         setNumber(number -= 1);
                         setShowAnswer(false);
@@ -83,5 +83,13 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: 20,
         textAlign: "center"
+    },
+    backButton: {
+        width: "45%",
+        backgroundColor: "#C5D3C8",
+        alignSelf: "center",
+        paddingVertical: 15,
+        borderRadius: 10,
+        marginVertical: 10
     }
 });
