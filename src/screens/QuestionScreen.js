@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
     },
     answer:{
         fontSize: 20,
+        color: "#B81C1C",
         marginBottom: 20
     },
     buttonGroup:{
