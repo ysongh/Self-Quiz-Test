@@ -1,15 +1,16 @@
 import React from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import { jsData, reactData } from "../Data";
 
 const Subject = ({ navigation }) => {
     return(
         <View>
             <Text style={styles.title}>Choose your subject</Text>
             <View style={styles.container}>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.push("Question", { data: jsData })}>
                     <Text style={styles.buttonText}>Javascript</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.push('Question')}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.push("Question", { data: reactData })}>
                     <Text style={styles.buttonText}>React</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button}>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 
-import { data } from "../Data";
+const Question = ({ navigation }) => {
+    const data = navigation.getParam("data");
 
-const Question = () => {
     const [quesAnswer, setQuesAnswer] = useState(data);
     const [showAnswer, setShowAnswer] = useState(false);
     let [current, setCurrent] = useState({"q": data[0].q, "a": data[0].a})
