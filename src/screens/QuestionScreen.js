@@ -3,6 +3,7 @@ import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 
 const Question = ({ navigation }) => {
     const data = navigation.getParam("data");
+    const title = navigation.getParam("title");
 
     const [quesAnswer, setQuesAnswer] = useState(data);
     const [showAnswer, setShowAnswer] = useState(false);
@@ -11,7 +12,7 @@ const Question = ({ navigation }) => {
 
     return(
         <View style={styles.container}>
-            <Text style={styles.title}>React</Text>
+            <Text style={styles.title}>{title}</Text>
             
             <Text style={styles.question}>{current.q}</Text>
             {showAnswer ? <Text style={styles.answer}>{current.a}</Text> : null}

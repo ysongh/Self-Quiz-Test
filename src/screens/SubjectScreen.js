@@ -7,10 +7,10 @@ const Subject = ({ navigation }) => {
         <View>
             <Text style={styles.title}>Choose your subject</Text>
             <View style={styles.container}>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.push("Question", { data: jsData })}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.push("Question", { data: jsData, title: "JavaScript" })}>
                     <Text style={styles.buttonText}>Javascript</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button} onPress={() => navigation.push("Question", { data: reactData })}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.push("Question", { data: reactData, title: "React" })}>
                     <Text style={styles.buttonText}>React</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button}>
