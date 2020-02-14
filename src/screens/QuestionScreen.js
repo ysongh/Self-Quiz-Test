@@ -4,8 +4,8 @@ import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 const Question = ({ navigation }) => {
     const data = navigation.getParam("data");
     const title = navigation.getParam("title");
+    const quesAnswer = data;
 
-    const [quesAnswer, setQuesAnswer] = useState(data);
     const [showAnswer, setShowAnswer] = useState(false);
     let [current, setCurrent] = useState({"q": data[0].q, "a": data[0].a})
     let [number, setNumber] = useState(0);
